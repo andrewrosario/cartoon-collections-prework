@@ -19,10 +19,8 @@ def long_planeteer_calls(array)
 end
 
 def find_the_cheese(array)
-  # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
-  array.include?(cheese_types.each do |cheese| 
-    return cheese
-    end)
+  value = array.find_index{ |obj| cheese_types.include?(obj)}
+  return array[value] unless value == nil 
 end
 
